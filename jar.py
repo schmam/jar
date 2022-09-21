@@ -19,24 +19,24 @@ class Jar:
     # getter
     @property
     def capacity(self):
-        return self.capacity
+        return self._capacity
 
     # setter
-    @property
+    @capacity.setter
     def capacity(self, capacity):
         if capacity < 0:
             raise ValueError ("invalid capacity")
-        self.capacity = capacity
+        self._capacity = capacity
 
     # getter
     @property
     def size(self):
-        return self.size
+        return self._size
 
     # setter
-    @property
+    @size.setter
     def size(self, size):
-        self.size = size
+        self._size = size
 
 
 def main():
@@ -44,3 +44,6 @@ def main():
     jar.deposit(11)
     jar.withdraw(5)
     print(jar)
+
+if __name__ == "__main__":
+    main()
